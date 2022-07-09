@@ -93,6 +93,11 @@ public class UtilityClass
             return builder.ToString();
           
         }
+ public enum Something{
+     EVER = 1,
+     FOREVER = 2
+ }
+
   public class User 
     {
         public int Id { get; set; }
