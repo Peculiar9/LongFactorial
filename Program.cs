@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Text;
 
 namespace LongFactorial
 {
@@ -39,15 +40,23 @@ namespace LongFactorial
         }
         static void Main(string[] args)
         {
-        //    var linkedList = new LinkedList.LinkedList();
-        //    linkedList.AddNodeToFront(6);
-        //    linkedList.AddNodeToFront(12);
-        //    linkedList.AddNodeToFront(1);
-        //    linkedList.AddNodeToFront(7);
-        //    linkedList.PrintList();
+
+          var sums = new TwoSums2();
+          var nums = new int [] {3,2,4};
+          var twoSums = sums.TwoSums(nums, 6);
+          StringBuilder builder = new StringBuilder();
+          builder.Append('[');
+          foreach (var item in twoSums)
+          {
+            builder.Append(item);
+          }
+          builder.Append(']');
+          Console.Write(builder);
         }
         
     }
+
 }
             
             
+        
