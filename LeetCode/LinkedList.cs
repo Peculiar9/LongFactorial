@@ -7,21 +7,21 @@ using System.Threading.Tasks;
 
 namespace LongFactorial.LeetCode
 {
-    public class LinkedList
+    public class LinkedList<T>
     {
-       private class Node
+       private class Node<T>
        {
-          private int value;
-          public Node next;
-          public Node(int value){
+          private T value;
+          public Node<T> next;
+          public Node(T value){
             this.value = value;
           }
        }
 
-       private Node first;
-       private Node last;
-       public void addFirst(int item){
-        var node = new Node(item);
+       private Node<T> first;
+       private Node<T> last;
+       public void addFirst(T item){
+        var node = new Node<T>(item);
         if(null == first)
             first = last = node;
             
@@ -30,8 +30,8 @@ namespace LongFactorial.LeetCode
             this.first = node;
         }
        }
-        public void addLast(int item){
-            var node = new Node(item);
+        public void addLast(T item){
+            var node = new Node<T>(item);
             //if node is empty
             if(null == last)
                 first = last = node; // the first and last is the node since it it the only node in the linked list

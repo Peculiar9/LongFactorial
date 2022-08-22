@@ -43,11 +43,10 @@ namespace LongFactorial
         static void Main(string[] args)
         {
           try{
-                var lList = new LeetCode.LinkedList();
-                lList.addFirst(5);
-                lList.addFirst(9);
-                lList.addLast(8);   
-                lList.addLast(7);   
+                var lList = new LeetCode.LinkedList<string>();
+                lList.addFirst("peculiar");
+                lList.addLast("babalola");   
+                lList.addLast("akinoluwa");   
                 
           }
           catch(Exception ex){
