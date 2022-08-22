@@ -28,7 +28,7 @@ namespace LongFactorial.LeetCode
                  first = last = node;
 
              else{
-                 this.first.next = node;
+                 node.next = first;
                  this.first = node;
              }
             }
@@ -60,6 +60,19 @@ namespace LongFactorial.LeetCode
                 }
                  return array;
              }
-        
+            public void removeFirst(){
+                var second = first.next;
+                first.next = null;
+                first = second;
+            }
+            public void reverse(){
+                var current = first.next;
+                var previous = first;
+                previous.next = null;
+                current.next = first;
+                first = current;
+                
+
+            }
     }
 }

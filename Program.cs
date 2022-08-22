@@ -46,16 +46,14 @@ namespace LongFactorial
           try{
                 var lList = new LeetCode.LinkedList<string>();
                 lList.addFirst("peculiar");
+                lList.addFirst("my name");
                 lList.addLast("babalola");   
                 lList.addLast("akinoluwa");   
+                lList.addLast("macintosh");
+                lList.removeFirst(); 
+                lList.reverse();  
                 Console.Write("[");
-                var llistArray = lList.toArray();
-                foreach (var item in llistArray)
-                {
-                   Console.Write($"{item}, ");
-                }
-                Console.Write("]");
-                Console.WriteLine(lList.size());
+
           }
           catch(Exception ex){
             Console.WriteLine(ex.Message);
