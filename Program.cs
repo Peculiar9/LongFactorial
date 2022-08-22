@@ -30,7 +30,7 @@ namespace LongFactorial
         //     if (e.Cancelled)
         //     {
         //          Console.WriteLine("[{0}] Send canceled.", token);
-        //     }
+        //     }5
         //     if (e.Error != null)
         //     {
         //          Console.WriteLine("[{0}] {1}", token, e.Error.ToString());
@@ -43,15 +43,12 @@ namespace LongFactorial
         static void Main(string[] args)
         {
           try{
-
-           var arrays = new Arrays(5);
-           arrays.insert(3);
-           arrays.insert(2);
-           arrays.insert(5);
-           arrays.insert(7);
-           arrays.insert(1);
-           arrays.printArray();
-           Console.Write(arrays.indexOf(5));
+                var lList = new LeetCode.LinkedList();
+                lList.addFirst(5);
+                lList.addFirst(9);
+                lList.addLast(8);   
+                lList.addLast(7);   
+                
           }
           catch(Exception ex){
             Console.WriteLine(ex.Message);

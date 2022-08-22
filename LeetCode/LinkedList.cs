@@ -24,6 +24,7 @@ namespace LongFactorial.LeetCode
         var node = new Node(item);
         if(null == first)
             first = last = node;
+            
         else{
             this.first.next = node;
             this.first = node;
