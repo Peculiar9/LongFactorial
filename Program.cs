@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using LongFactorial.DSAMosh;
 using LongFactorial.LeetCode;
 
 namespace LongFactorial
@@ -41,15 +42,25 @@ namespace LongFactorial
         // }
         static void Main(string[] args)
         {
-           var emails = new string[] {"a@leetcode.com","b@leetcode.com","c@leetcode.com"};
-           var noUnique = new NumUniqueEmails().Solution(emails);
-           Console.Write(noUnique);
+          try{
 
+           var arrays = new Arrays(5);
+           arrays.insert(3);
+           arrays.insert(2);
+           arrays.insert(5);
+           arrays.insert(7);
+           arrays.insert(1);
+           arrays.printArray();
+           Console.Write(arrays.indexOf(5));
+          }
+          catch(Exception ex){
+            Console.WriteLine(ex.Message);
+          }
         }
-        
     }
-
 }
             
             
+        
+
         
