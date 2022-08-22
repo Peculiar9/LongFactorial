@@ -40,6 +40,7 @@ namespace LongFactorial
         //     }
         //     mailSent = true;
         // }
+      
         static void Main(string[] args)
         {
           try{
@@ -47,7 +48,14 @@ namespace LongFactorial
                 lList.addFirst("peculiar");
                 lList.addLast("babalola");   
                 lList.addLast("akinoluwa");   
-                
+                Console.Write("[");
+                var llistArray = lList.toArray();
+                foreach (var item in llistArray)
+                {
+                   Console.Write($"{item}, ");
+                }
+                Console.Write("]");
+                Console.WriteLine(lList.size());
           }
           catch(Exception ex){
             Console.WriteLine(ex.Message);
@@ -55,6 +63,7 @@ namespace LongFactorial
         }
     }
 }
+
             
             
         
