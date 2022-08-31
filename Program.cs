@@ -50,8 +50,12 @@ namespace LongFactorial
                 lList.addLast("babalola");   
                 lList.addLast("akinoluwa");   
                 lList.addLast("macintosh");
-                lList.removeFirst(); 
-                lList.reverse();  
+                // var indx = lList.indexOf("macintosh");
+                // lList.removeFirst(); 
+                // lList.removeLast();
+                var llistArray = lList.toArray();
+                var fromLast = lList.kthFromLast("babalola");
+                // lList.reverse();  
                 Console.Write("[");
 
           }

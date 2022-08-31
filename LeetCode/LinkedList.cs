@@ -1,3 +1,4 @@
+using System.Transactions;
 using System.Globalization;
 using System.Runtime.ExceptionServices;
 using System;
@@ -9,7 +10,7 @@ namespace LongFactorial.LeetCode
 {
     public class LinkedList<T>
     {
-       private class Node<T>
+       public class Node<T>
        {
                public T value;
                public Node<T> next;
@@ -48,31 +49,74 @@ namespace LongFactorial.LeetCode
              public int size(){
                 return arrSize;
              }
-             public T[] toArray(){
-                var array = new T[arrSize];
+             public T[] toArray()
+             {
                 var current = first;
-                for (int i = 0; i < 100; i++)
-                {
-                    array[i] = current.value;
+                var arrList = new List<T>();
+                while(null != current.next){
                     current = current.next;
-                    if(current.next == null)
-                        break;
+                    arrList.Add(current.value);
+                    arrSize++;
                 }
-                 return array;
+                
+                 return arrList.ToArray();
              }
+
+            public int indexOf(T value){
+                var current = first;
+                int index = 0;
+                while(current != null){
+                    if(current.value.Equals(value)) return index;
+                    else{
+                        current = current.next;
+                        index++;
+                    }
+                }
+                throw new Exception("No such value exists in this LinkedList");
+            }
+                
+                   
             public void removeFirst(){
                 var second = first.next;
                 first.next = null;
                 first = second;
             }
+            public void removeLast(){
+                var previous = findPrevious(last);
+                previous.next = null;
+                last = previous;
+            }
+                
             public void reverse(){
                 var current = first.next;
                 var previous = first;
                 previous.next = null;
                 current.next = first;
                 first = current;
-                
-
+            }
+             
+            public int kthFromLast(T item){
+                var flag = 0;
+                var counter = 0;
+                var pointer = first;
+                while(pointer.next != null){
+                    if(pointer.value.Equals(item))
+                        flag = 1;
+                    pointer = pointer.next;    
+                    if(flag == 1)
+                       counter++;    
+                }
+               return counter;
+            }
+                          
+            public Node<T> findPrevious(Node<T> node){
+                var current = first;
+                while(null != current)
+                {
+                    if(current.next == node) return current;
+                    current = current.next;
+                }
+                return null;
             }
     }
 }
