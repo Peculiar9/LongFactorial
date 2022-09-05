@@ -115,5 +115,17 @@ namespace LongFactorial.DSAMosh
                 }
                 return null;
             }
+
+            public void reverseLinkedList()
+            {
+                var previous = first;
+                while(previous.next != null){
+                    var current = previous.next;
+                    var next = current.next;
+                    current.next = previous;
+                    previous = current;
+                }
+                
+            }
     }
 }

@@ -9,7 +9,6 @@ namespace LongFactorial
         {
           var stack = new StackSolutions();
           var reversed = stack.reverse("peculiar");
-          
         }
     }
 }
@@ -18,6 +17,7 @@ namespace LongFactorial
             
         
 
+          
         
 
         // public static int Sqr(char e){
