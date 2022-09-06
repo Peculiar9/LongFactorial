@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace LongFactorial.DSAMosh
@@ -84,13 +85,7 @@ namespace LongFactorial.DSAMosh
                 last = previous;
             }
                 
-            public void reverse(){
-                var current = first.next;
-                var previous = first;
-                previous.next = null;
-                current.next = first;
-                first = current;
-            }
+          
              
             public int kthFromLast(T item){
                 var flag = 0;
@@ -116,16 +111,28 @@ namespace LongFactorial.DSAMosh
                 return null;
             }
 
-            public void reverseLinkedList()
+            public void reverse()
             {
                 var previous = first;
-                while(previous.next != null){
-                    var current = previous.next;
-                    var next = current.next;
+                var current = previous.next;
+                var next = current.next;
+                previous.next = null;   
+                while(previous != null){
                     current.next = previous;
                     previous = current;
+                    current = next;
+                    next = next.next; 
                 }
                 
+            }
+            public string print(){
+                StringBuilder stringBuilder = new StringBuilder();
+                var current = first;
+                while(current != null){
+                    stringBuilder.Append($", {current.value}");
+                    current = current.next;
+                }
+                return $"[{stringBuilder.ToString()}]";
             }
     }
 }
