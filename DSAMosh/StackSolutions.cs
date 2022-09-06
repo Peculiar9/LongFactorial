@@ -14,11 +14,15 @@ namespace LongFactorial.DSAMosh
           Stack<char> myStack = new Stack<char>();
           foreach (var item in input)
             myStack.Push(item);
-          while(myStack.Count > 0)
+          while(isEmpty(myStack))
             reversed += myStack.Pop();
             return reversed;
         }
-
+        private bool isEmpty<T>(Stack<T> stack)
+        {
+           bool empty = stack.Count > 0 ? false : true;
+           return empty;
+        }
         public bool validParanthesis(string s)
         {
             Stack<char> stackPara = new Stack<char>();
