@@ -1,4 +1,5 @@
-﻿using LongFactorial.DSAMosh;
+﻿using System;
+using LongFactorial.DSAMosh;
 
 namespace LongFactorial
 {
@@ -7,9 +8,17 @@ namespace LongFactorial
     {
         static void Main(string[] args)
         {
-          var stack = new StackSolutions();
-          var reversed = stack.reverse("peculiar");
-          
+          var lList = new LinkedList<string>();
+          lList.addLast("Unique");
+          lList.addLast("Peculiar");
+          lList.addLast("Treasure");
+          lList.addLast("Enoch");
+          lList.addLast("Elisha");
+          Console.WriteLine("LinkedList Happening here!!!");
+          Console.WriteLine(lList.print());
+          lList.reverse();
+          Console.WriteLine(lList.print());
+          // lList.reverse();
         }
     }
 }
@@ -18,6 +27,7 @@ namespace LongFactorial
             
         
 
+          
         
 
         // public static int Sqr(char e){
