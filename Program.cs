@@ -1,20 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using LongFactorial.DSAMosh;
-using LongFactorial.LeetCode;
 
 namespace LongFactorial
 {
 
     public class Program
     {
-        public static int Sqr(char e){
-            var x = (int)Math.Pow((double)(int)e, 2);
-            return x;
+        static void Main(string[] args)
+        {
+          var lList = new LinkedList<string>();
+          lList.addLast("Unique");
+          lList.addLast("Peculiar");
+          lList.addLast("Treasure");
+          lList.addLast("Enoch");
+          lList.addLast("Elisha");
+          Console.WriteLine("LinkedList Happening here!!!");
+          Console.WriteLine(lList.print());
+          lList.reverse();
+          Console.WriteLine(lList.print());
+          // lList.reverse();
         }
+    }
+}
+
+            
+            
+        
+
+          
+        
+
+        // public static int Sqr(char e){
+        //     var x = (int)Math.Pow((double)(int)e, 2);
+        //     return x;
+        // }
         // public static double dateTimeToUnix(string dateTime)
         // {
         //     DateTime dt = new DateTime(dateTime);
@@ -41,33 +60,3 @@ namespace LongFactorial
         //     mailSent = true;
         // }
       
-        static void Main(string[] args)
-        {
-          try{
-                var lList = new LeetCode.LinkedList<string>();
-                lList.addFirst("peculiar");
-                lList.addFirst("my name");
-                lList.addLast("babalola");   
-                lList.addLast("akinoluwa");   
-                lList.addLast("macintosh");
-                // var indx = lList.indexOf("macintosh");
-                // lList.removeFirst(); 
-                // lList.removeLast();
-                var llistArray = lList.toArray();
-                var fromLast = lList.kthFromLast("babalola");
-                // lList.reverse();  
-                Console.Write("[");
-
-          }
-          catch(Exception ex){
-            Console.WriteLine(ex.Message);
-          }
-        }
-    }
-}
-
-            
-            
-        
-
-        

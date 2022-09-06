@@ -1,16 +1,14 @@
-using System.Transactions;
-using System.Globalization;
-using System.Runtime.ExceptionServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace LongFactorial.LeetCode
+namespace LongFactorial.DSAMosh
 {
     public class LinkedList<T>
     {
-       public class Node<T>
+         public class Node<T>
        {
                public T value;
                public Node<T> next;
@@ -87,13 +85,7 @@ namespace LongFactorial.LeetCode
                 last = previous;
             }
                 
-            public void reverse(){
-                var current = first.next;
-                var previous = first;
-                previous.next = null;
-                current.next = first;
-                first = current;
-            }
+          
              
             public int kthFromLast(T item){
                 var flag = 0;
@@ -117,6 +109,33 @@ namespace LongFactorial.LeetCode
                     current = current.next;
                 }
                 return null;
+            }
+
+            public void reverse()
+            {
+                var previous = first;
+                var current = first.next;
+                previous.next = null;   
+                while(current != null){
+                    var next = current.next;
+                    current.next = previous;
+                    previous = current;
+                    current = next;
+                }
+                last = first;
+                last.next = null;
+                first = previous;
+            }
+            public string print(){
+                StringBuilder stringBuilder = new StringBuilder();
+                var current = first;
+                stringBuilder.Append(first.value);
+                current = current.next;
+                while(current != null){
+                    stringBuilder.Append($", {current.value}");
+                    current = current.next;
+                }
+                return $"[{stringBuilder.ToString()}]";
             }
     }
 }
