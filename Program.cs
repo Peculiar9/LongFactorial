@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using LongFactorial.DSAMosh;
 using LongFactorial.LeetCode;
 
 namespace LongFactorial
@@ -29,7 +30,7 @@ namespace LongFactorial
         //     if (e.Cancelled)
         //     {
         //          Console.WriteLine("[{0}] Send canceled.", token);
-        //     }
+        //     }5
         //     if (e.Error != null)
         //     {
         //          Console.WriteLine("[{0}] {1}", token, e.Error.ToString());
@@ -39,17 +40,34 @@ namespace LongFactorial
         //     }
         //     mailSent = true;
         // }
+      
         static void Main(string[] args)
         {
-           var emails = new string[] {"a@leetcode.com","b@leetcode.com","c@leetcode.com"};
-           var noUnique = new NumUniqueEmails().Solution(emails);
-           Console.Write(noUnique);
+          try{
+                var lList = new LeetCode.LinkedList<string>();
+                lList.addFirst("peculiar");
+                lList.addFirst("my name");
+                lList.addLast("babalola");   
+                lList.addLast("akinoluwa");   
+                lList.addLast("macintosh");
+                // var indx = lList.indexOf("macintosh");
+                // lList.removeFirst(); 
+                // lList.removeLast();
+                var llistArray = lList.toArray();
+                var fromLast = lList.kthFromLast("babalola");
+                // lList.reverse();  
+                Console.Write("[");
 
+          }
+          catch(Exception ex){
+            Console.WriteLine(ex.Message);
+          }
         }
-        
     }
-
 }
+
             
             
+        
+
         
