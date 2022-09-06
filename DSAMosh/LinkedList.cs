@@ -114,20 +114,23 @@ namespace LongFactorial.DSAMosh
             public void reverse()
             {
                 var previous = first;
-                var current = previous.next;
-                var next = current.next;
+                var current = first.next;
                 previous.next = null;   
-                while(previous != null){
+                while(current != null){
+                    var next = current.next;
                     current.next = previous;
                     previous = current;
                     current = next;
-                    next = next.next; 
                 }
-                
+                last = first;
+                last.next = null;
+                first = previous;
             }
             public string print(){
                 StringBuilder stringBuilder = new StringBuilder();
                 var current = first;
+                stringBuilder.Append(first.value);
+                current = current.next;
                 while(current != null){
                     stringBuilder.Append($", {current.value}");
                     current = current.next;
