@@ -114,8 +114,7 @@ namespace LongFactorial.DSAMosh
             public void reverse()
             {
                 var previous = first;
-                var current = first.next;
-                previous.next = null;   
+                var current = first.next;  
                 while(current != null){
                     var next = current.next;
                     current.next = previous;
