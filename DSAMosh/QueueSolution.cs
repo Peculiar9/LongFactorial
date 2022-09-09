@@ -19,10 +19,8 @@ namespace LongFactorial.DSAMosh
             queue.Enqueue(4);
             queue.Enqueue(5);
             queue.Enqueue(6);
-            var interim = queue.Dequeue();
-            foreach(var item in queue)
-                stringBuilder.Append(" "+ item);
-            return stringBuilder.ToString();                ;
+            var peek = queue.Reverse();
+            return peek.ToString();
         }
         
         
