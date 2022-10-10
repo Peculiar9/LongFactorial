@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using LongFactorial.DSAMosh;
+﻿using LongFactorial.DataStructures.cs;
 
 namespace LongFactorial
 {
@@ -12,6 +10,12 @@ namespace LongFactorial
          
           
           // lList.reverse();
+          TestTreeClass tree = new TestTreeClass();
+          var array = new int[]{10, 5, 15, 6, 1, 8, 12, 18, 17};
+          foreach (var it in array)
+          {
+             tree.addItem(it);
+          }
 
         }
     }

@@ -24,7 +24,6 @@ public class Search
            else if (guess < item)
                low = mid;
            else high = mid;
-
         }
 
 
