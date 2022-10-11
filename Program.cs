@@ -1,4 +1,5 @@
-﻿using LongFactorial.DataStructures.cs;
+﻿using System;
+using LongFactorial.DataStructures.cs;
 
 namespace LongFactorial
 {
@@ -16,7 +17,8 @@ namespace LongFactorial
           {
              tree.addItem(it);
           }
-
+          var found = tree.findItem(12);
+          Console.WriteLine(found);
         }
     }
 }

@@ -50,6 +50,18 @@ namespace LongFactorial.DataStructures.cs
                     }
                 }
         }
-    }
+        public bool findItem(int item)
+        {
+            var current = root;
+            while(current != null)
+            {
+                if(item < current.data) current = current.left;
+                else if(item > current.data) current = current.right;
+                else{return true;}
+            }
+           return false;
+         } 
+   }
 }
+                        
 
