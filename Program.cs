@@ -17,8 +17,9 @@ namespace LongFactorial
           {
              tree.addItem(it);
           }
-          var found = tree.findItem(12);
-          Console.WriteLine(found);
+          // var found = tree.findItem(12);
+          // Console.WriteLine(found);
+          tree.preorderTraversal();
         }
     }
 }
