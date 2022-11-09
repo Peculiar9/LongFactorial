@@ -8,6 +8,10 @@ namespace LongFactorial.DSAMosh
 {
     public class LinkedList<T>
     {
+        public LinkedList()
+        {
+            
+        }
          public class Node<T>
        {
                public T value;
@@ -137,5 +141,6 @@ namespace LongFactorial.DSAMosh
                 }
                 return $"[{stringBuilder.ToString()}]";
             }
+            
     }
 }
