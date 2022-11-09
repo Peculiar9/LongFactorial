@@ -7,10 +7,10 @@ namespace LongFactorial.LeetCode
 {
     public class RunningSum
     {
-        public int Sum(int[] nums){
-            int n = nums.Length - 1;
-           if(n == 0) break;
-           var sum = 
-        }
+        // public int Sum(int[] nums){
+        //     int n = nums.Length - 1;
+        //    if(n == 0) break;
+        //    var sum = 
+        // }
     }
 }

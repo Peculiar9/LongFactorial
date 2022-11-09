@@ -7,8 +7,7 @@ namespace LongFactorial.LeetCode
 {
     public class FirstAndLast
     {
-         public int[] SearchRange(int[] nums, int target) {
-           
-        }   
+        //  public int[] SearchRange(int[] nums, int target) 
+         
     }
 }
