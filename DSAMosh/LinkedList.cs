@@ -21,8 +21,8 @@ namespace LongFactorial.DSAMosh
                }
             }
             private int arrSize;
-            private Node<T> first;
-            private Node<T> last;
+            public Node<T> first;
+            public Node<T> last;
 
             public void addFirst(T item)
             {

@@ -1,5 +1,5 @@
-﻿using System;
-using LongFactorial.DataStructures.cs;
+﻿using System.Collections.Generic;
+// using LongFactorial.DSAMosh;
 using LongFactorial.LeetCode;
 
 namespace LongFactorial
@@ -9,10 +9,14 @@ namespace LongFactorial
     {
         static void Main(string[] args)
         {
-         
-
-         var noSteps = new numOfSteps();
-          Console.WriteLine(noSteps.NumberOfSteps(14));
+           int[] nums = {1,2,3,4,5};
+           var lList = new LinkedList<int>();
+           foreach (var item in nums)
+           {
+              lList.AddLast(item);
+           }
+           var midNode = new middleNodeOfLlist();
+           midNode.middleNode(lList.First);
           // lList.reverse();
           // TestTreeClass tree = new TestTreeClass();
           // var array = new int[]{10, 5, 15, 6, 1, 8, 12, 18, 17};

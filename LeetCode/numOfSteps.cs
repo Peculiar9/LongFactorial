@@ -1,5 +1,7 @@
 using System;
-using static LongFactorial.DSAMosh.LinkedList<T>;
+using System.Collections.Generic;
+// using LinkedList;
+// using static LongFactorial.DSAMosh.LinkedList<T>;
 
 namespace LongFactorial.LeetCode
 {
@@ -19,19 +21,21 @@ namespace LongFactorial.LeetCode
     }
     public class middleNodeOfLlist
     {
-        public Node<int> middleNode(Node<int> head)
+        public LinkedListNode<int> middleNode(LinkedListNode<int> head)
         {
             int count = 0, count2 = 0;
 
             var currentNode = head;
-            while(currentNode.next != null){
-                currentNode = currentNode.next;
+            while(currentNode != null){
+                currentNode = currentNode.Next;
                 count++;
             }
             var nowNode = head;
-            while(count2 < Math.Ceiling((double)count / 2))
+            var upperBound = Math.Ceiling((double)count / 2);
+            while(count2 < upperBound)
             {
-                nowNode = nowNode.next;
+                nowNode = nowNode.Next;
+                count2++;
             }
 
             return nowNode;
