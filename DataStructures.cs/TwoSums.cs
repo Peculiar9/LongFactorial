@@ -14,12 +14,12 @@ public class TwoSumsClass{
         
         var sumsHash = new Hashtable();
         var arrayOfInt = new List<int>();
-            if (nums.Length == 2)
+            if (nums.Length <= 2)
             {
                 if(nums[0].Equals(Complement(nums[0], target)) || ((nums[0] + nums[1]) == target)) return new int[2]{0,1};
+                
             }
-            else if (nums.Length > 2)
-            {
+           
               for (int i = 0; i < nums.Length; i++)
               { 
                  sumsHash.Add(nums[i], i);
@@ -27,14 +27,13 @@ public class TwoSumsClass{
               for (int j = 0; j < nums.Length; j++)
               {
                   var comp = Complement(nums[j], target);
-                  if (comp != nums[j] && sumsHash.ContainsKey(comp))
+                  if (sumsHash.ContainsKey(comp))
                   {
                       arrayOfInt.Add(j);
                       arrayOfInt.Add((int)sumsHash[comp]);
                       break;
                   }
               } 
-            } 
            
         return arrayOfInt.ToArray();
     }
@@ -42,6 +41,7 @@ public class TwoSumsClass{
               
 
        
+              
             
                
             
