@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using LongFactorial.DataStructures.cs;
 // using LongFactorial.DSAMosh;
 using LongFactorial.LeetCode;
 
@@ -9,24 +12,8 @@ namespace LongFactorial
     {
         static void Main(string[] args)
         {
-           int[] nums = {1,2,3,4,5};
-           var lList = new LinkedList<int>();
-           foreach (var item in nums)
-           {
-              lList.AddLast(item);
-           }
-           var midNode = new middleNodeOfLlist();
-           midNode.middleNode(lList.First);
-          // lList.reverse();
-          // TestTreeClass tree = new TestTreeClass();
-          // var array = new int[]{10, 5, 15, 6, 1, 8, 12, 18, 17};
-          // foreach (var it in array)
-          // {
-          //    tree.addItem(it);
-          // }
-          // var found = tree.f indItem(12);
-          // Console.WriteLine(found);
-          // tree.preorderTraversal();
+         var recursive = new Recursion();
+         recursive.Test(9);
         }
     }
 }

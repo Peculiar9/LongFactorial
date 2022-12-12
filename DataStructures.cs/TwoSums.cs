@@ -17,6 +17,7 @@ public class TwoSumsClass{
             if (nums.Length <= 2)
             {
                 if(nums[0].Equals(Complement(nums[0], target)) || ((nums[0] + nums[1]) == target)) return new int[2]{0,1};
+                
             }
            
               for (int i = 0; i < nums.Length; i++)
