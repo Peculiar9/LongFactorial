@@ -1,3 +1,5 @@
+using System;
+
 namespace LongFactorial.DataStructures.cs
 {
 
@@ -60,8 +62,19 @@ namespace LongFactorial.DataStructures.cs
                 else{return true;}
             }
            return false;
-         } 
+        } 
+        public void preorderTraversal(){
+            preorderTraversal(root);
+        }
+        private void preorderTraversal(Node root)
+        {
+            if(root == null) return;
+            Console.WriteLine(root.data);
+            preorderTraversal(root.left);
+            preorderTraversal(root.right);
+        }
    }
 }
                         
+
 

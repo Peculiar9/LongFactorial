@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using LongFactorial.DataStructures.cs;
+// using LongFactorial.DSAMosh;
+using LongFactorial.LeetCode;
 
 namespace LongFactorial
 {
@@ -8,17 +12,8 @@ namespace LongFactorial
     {
         static void Main(string[] args)
         {
-         
-          
-          // lList.reverse();
-          TestTreeClass tree = new TestTreeClass();
-          var array = new int[]{10, 5, 15, 6, 1, 8, 12, 18, 17};
-          foreach (var it in array)
-          {
-             tree.addItem(it);
-          }
-          var found = tree.findItem(12);
-          Console.WriteLine(found);
+         var recursive = new Recursion();
+         recursive.Test(9);
         }
     }
 }
